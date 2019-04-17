@@ -1,0 +1,25 @@
+package introduction1;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class autoSugestive {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver ();
+		driver.get("https://www.jetaways.net");
+		
+		//clear edit box
+			driver.findElement(By.id("flights-origin-prepop-whitelabel_en")).clear();
+			driver.findElement(By.id("flights-origin-prepop-whitelabel_en")).sendKeys("CPT");
+			Thread.sleep(2000);
+			driver.findElement(By.id("flights-origin-prepop-whitelabel_en")).sendKeys(Keys.ENTER);
+	}        
+
+}

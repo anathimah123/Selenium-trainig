@@ -1,0 +1,14 @@
+package practise;
+
+public class myownpract {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.firefox.driver", "C:\\Users\\Bobby Carelse\\Documents\\geckodriver.exe");
+		WebDriver driver=new firefox ();
+		
+		driver.get("http://google.com");//this will hit url on the browser
+		System.out.println(driver.getTitle()); 
+	}
+
+}

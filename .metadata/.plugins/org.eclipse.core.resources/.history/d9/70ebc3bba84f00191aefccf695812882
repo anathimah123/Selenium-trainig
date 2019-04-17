@@ -1,0 +1,22 @@
+package introduction1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class testingchrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe ");
+		WebDriver driver =new ChromeDriver ();
+		driver.get("https://login.salesforce.com/?locale=eu");
+		driver.findElement(By.id("username")).sendKeys("anathimahlathi@gmail.com");
+		driver.findElement(By.name("pw")).sendKeys("Liyabona@1");
+		//driver.findElement(By.className("input r4 wide mb16 mt8 username")).click();
+        //driver.findElement(By.linkText("Forgot Your Password?")).click(); //gives an error: compound classes does not contain space
+        driver.findElement(By.xpath("//*[@id='Login']")).click();
+	}
+
+}

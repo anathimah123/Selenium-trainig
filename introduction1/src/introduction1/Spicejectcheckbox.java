@@ -1,0 +1,85 @@
+package introduction1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+//testNG is one of the testing framework
+
+public class Spicejectcheckbox {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver ();
+		driver.get("https://www.spicejet.com");
+		
+		Assert.assertFalse(driver.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+		//if you want to know whether the checkbox is selected or not
+		//System.out.println(driver.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());//if it returns true that means the check box is selected but if returns false then the checkbox is not selected
+		
+		//use*regular expression and the attribute should be correct and simpl
+		driver.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_SeniorCitizenDiscount']")).click();
+		System.out.println(driver.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+		Assert.assertTrue(driver.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+		
+		
+		//oneway/return
+		//System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date1")).isEnabled());
+		System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+		System.out.println(driver.findElement(By.id("Div1")).getAttribute("style"));
+		if (driver.findElement(By.id("Div1")).getAttribute("style").contains("1"))
+			
+		{
+			System.out.println("it's enabled");
+			Assert.assertTrue(true);
+		}
+		else
+		{
+			Assert.assertTrue(false);// if it does not contain one it will fail
+			
+		}
+		//to find if it is enabled or not there is a specific code which one can use in selenium
+		 //System.out.println(driver.findElement(By.name("ctl00$mainContent$view_date1")).isEnabled());
+		
+		
+		//i want to print the number of checkbox that are present in this page, to count the number of check boxes you must find a locator that is common to all the check box
+		//System.out.println(driver.findElements(By.cssSelector("input[type='checkbox']")).size());
+		//driver.findElement(By.id("divpaxinfo")).click();
+		//Thread.sleep(2000L);
+	
+		//System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+		//for (int i =1;i<2;i++)
+		{
+			//driver.findElement(By.id("hrefIncAdt")).click();
+			//driver.findElement(By.id("btnclosepaxoption")).click();
+			//we actually comparing two arguments one argument is what your selenuim script is returning and the other is what you are expecting. why 5 adult it is because i am iterating 4 times which eventually will have 5  and 5 adults matches what i will get from get text
+			//Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "2 Adult");
+			//System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

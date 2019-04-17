@@ -1,0 +1,11 @@
+package practise;
+
+public class basics {
+
+	public void ValidateHeader()
+	{
+		system.println("header links method");
+		
+	}
+
+}

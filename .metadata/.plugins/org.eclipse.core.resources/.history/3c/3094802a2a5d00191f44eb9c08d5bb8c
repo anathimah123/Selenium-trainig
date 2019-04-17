@@ -1,0 +1,28 @@
+package introduction1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Spicejectcheckbox {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver ();
+		driver.get("https://www.spicejet.com");
+		
+		//if you want to know whether the checkbox is selected or not
+		System.out.println(driver.findElement(By.cssSelector("input[id*='seniorCitizenDiscount']")).isSelected());//if it returns true that means the check box is selected but if returns false then the checkbox is not selected
+		
+		//use*regular expression and the attribute should be correct and simple
+		driver.findElement(By.cssSelector("input[id*='seniorCitizenDiscount']")).click();
+		
+		//i want to print the number of checkbox that are present in this page, to count the number of check boxes yiu must find a locator that is common to all the check box
+		
+		
+	
+	}
+
+}

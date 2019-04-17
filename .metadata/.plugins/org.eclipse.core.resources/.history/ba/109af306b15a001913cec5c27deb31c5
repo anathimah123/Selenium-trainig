@@ -1,0 +1,23 @@
+package introduction1;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class autoSugestive {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver ();
+		driver.get("https://www.makemytrip.com");
+		
+		//clear edit box
+			driver.findElement(By.id("react-autowhatever-1-section-0-item-0")).clear();
+			driver.findElement(By.id("react-autowhatever-1-section-0-item-0")).sendKeys("MUM");
+			
+	}        
+
+}

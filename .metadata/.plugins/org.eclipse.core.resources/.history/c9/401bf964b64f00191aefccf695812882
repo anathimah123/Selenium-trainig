@@ -1,0 +1,14 @@
+package practise;
+
+public class ChromePrac {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Chromedriver
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bobby Carelse\\Documents\\chromedriver.exe");
+		Webdriver driver= new chromedriver();
+		driver.get("http://facebook.com");
+		
+	}
+
+}

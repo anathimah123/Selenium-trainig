@@ -1,0 +1,15 @@
+package practise;
+
+public class Basic1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+System.out.println("i have navigated to home page");
+basics b= new basics();
+b.ValidateHeader();
+//Classobject.methodname
+		
+	
+	}
+}
